@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ระบบแผนการบริหารงานคณบดี คณะวารสารศาสตร์และสื่อสารมวลชน</title>
+
+  <link rel="icon" href="https://quota.jc.tu.ac.th/images/jc_logo.png" type="image/png">
+  
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- FontAwesome (Icons) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- SweetAlert2 CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+  
+  <!-- Google Fonts: Noto Sans Thai -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    html, body {
+      height: 100%;
+    }
+    body {
+      font-family: "Noto Sans Thai", sans-serif;
+      background-color: #f8f9fa;
+      padding-top: 80px; 
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+     .bg-theme { background-color: #743d88; }
+    .text-theme { color: #743d88; }
+    .btn-theme {
+      background-color: #743d88;
+      color: white;
+      transition: all 0.3s ease;
+    }
+    .btn-theme:hover {
+      background-color: #5a2d6b;
+      color: white;
+      transform: translateY(-2px);
+    }
+     /* Hero Banner */
+    .hero-section {
+      background: linear-gradient(135deg, #ffffff 0%, #f3e9f7 100%);
+      border-left: 6px solid #743d88;
+      border-radius: 16px;
+    }
+
+    /* Navbar Styles */
+    .brand-container { display: flex; align-items: center; text-decoration: none; color: white; }
+    .brand-logo { width: 40px; margin-right: 10px; }
+    .brand-text h4 { margin: 0; font-size: 1.2rem; font-weight: 700; }
+    
+    /* Footer Link */
+    .footer-link {
+      color: #743d88;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.2s;
+    }
+    .footer-link:hover {
+      color: #5a2d6b;
+      text-decoration: underline;
+    }
+
+    /* --- เพิ่ม CSS สำหรับส่วนหน้าแรก (หน้าแนะนำคณบดี) --- */
+    .dean-img-container {
+      width: 260px;
+      height: 260px;
+      border-radius: 50%;
+      padding: 6px;
+      background: linear-gradient(135deg, #743d88, #b886cb); /* ไล่สีขอบให้ดูมีมิติ */
+      margin: 0 auto;
+    }
+
+    .dean-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top;
+      border-radius: 50%;
+      border: 4px solid #ffffff;
+    }
+
+    .hero-card {
+      border-radius: 20px;
+      border: none;
+    }
+
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-theme shadow fixed-top">
+    <div class="container-fluid px-3 px-lg-4"> 
+      <a class="brand-container me-auto" href="#">
+        <img src="https://quota.jc.tu.ac.th/images/jc_logo.png" alt="JC Logo" class="brand-logo">
+        <div class="brand-text">
+          <h4>ระบบแผนการบริหารงานคณบดี</h4>
+          <small>คณะวารสารศาสตร์และสื่อสารมวลชน</small>
+        </div>
+      </a>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <!-- Main Content -->
+  <main class="container flex-grow-1 my-4 d-flex align-items-center justify-content-center">
+    
+    <div class="card hero-card shadow-lg w-100" style="max-width: 950px; overflow: hidden;">
+      <div class="row g-0">
+        <!-- ฝั่งซ้าย: รูปภาพคณบดี -->
+        <div class="col-md-5 d-flex align-items-center justify-content-center bg-light p-5">
+          <div class="dean-img-container shadow-sm">
+            <img src="https://raw.githubusercontent.com/thiti0365/images/main/ผู้ช่วยศาสตราจารย์ ดร.อัจฉรา ปัณฑรานุวงศ์_reso_4.png" alt="ผู้ช่วยศาสตราจารย์ ดร.อัจฉรา ปัณฑรานุวงศ์" class="dean-img">
+          </div>
+        </div>
+        
+        <!-- ฝั่งขวา: ข้อความแนะนำและปุ่มเข้าสู่ระบบ -->
+        <div class="col-md-7 p-4 p-md-5 d-flex flex-column justify-content-center">
+          <span class="badge bg-theme text-white mb-3 shadow-sm" style="width: fit-content; font-size: 0.9rem; padding: 8px 15px; border-radius: 20px;">
+            JC Dean Plan
+          </span>
+          <h2 class="fw-bold mb-2" style="color: #333;">ระบบแผนการบริหารงานคณบดี</h2>
+          <h6 class="text-muted mb-4">ผู้ช่วยศาสตราจารย์ ดร.อัจฉรา ปัณฑรานุวงศ์</h6>
+          
+          <p class="mb-4 text-secondary" style="line-height: 1.7; font-size: 1.05rem;">
+            ยินดีต้อนรับเข้าสู่ระบบแผนการบริหารงานคณบดี คณะวารสารศาสตร์และสื่อสารมวลชน ระบบที่รวบรวมข้อมูลเป็นศูนย์กลางการติดตามยุทธศาสตร์ แผนการดำเนินงาน โครงการสำคัญ ผลงานคณบดีของ ผู้ช่วยศาสตราจารย์ ดร.อัจฉรา ปัณฑรานุวงศ์
+          </p>
+          
+          <div>
+            <!-- ปุ่มนี้ใช้ ID "menu-2-btn" เพื่อให้สคริปต์ที่คุณเขียนไว้จับ Event การคลิกได้อัตโนมัติ -->
+            <a href="#" id="menu-2-btn" class="btn btn-lg text-white shadow" style="background-color: #743d88; border-radius: 30px; padding: 12px 35px; transition: transform 0.2s;">
+              <i class="fas fa-calendar-alt me-2"></i> เข้าสู่ระบบแผนการบริหารงานคณบดี
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-white border-top mt-auto py-4">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6 text-center text-lg-start mb-2 mb-lg-0">
+          <p class="mb-0 text-muted small">
+            Copyright © 2026 <strong>Faculty of Journalism and Mass Communication</strong>,<br>
+            Thammasat University. All rights reserved.
+          </p>
+        </div>
+        <div class="col-lg-6 text-center text-lg-end">
+          <p class="mb-0 text-muted small">
+            Powered by 
+            <a href="https://jc.tu.ac.th/th/personnel/staff#committee_214" target="_blank" class="footer-link">
+              งานเทคโนโลยีดิจิทัลและการสื่อสาร
+            </a>
+          </p>
+          <p class="mb-0 text-muted small mt-2">
+            <span style="font-size: 0.9rem; color: #6c757d;">พบปัญหาการใช้งาน?: (Click ที่ไอคอน Line)</span><br>
+            <a href="https://line.me/R/ti/p/@dxx9496i?ts=01061636&oat_content=url" 
+               target="_top" 
+               class="text-decoration-none fw-bold"
+               style="color: #00B900;"> 
+               <i class="fab fa-line fa-lg"></i> แจ้งที่ Line OA: JC Service Center
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <!-- SweetAlert2 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <!-- Bootstrap Bundle JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    // --- 1. ฟังก์ชันตรวจจับอุปกรณ์เบื้องต้น ---
+    function isIOS() {
+      return /iPhone|iPad|iPod/i.test(navigator.userAgent);
+    }
+
+    function isInAppBrowser() {
+      const ua = navigator.userAgent || navigator.vendor || window.opera;
+      return /FBAN|FBAV|Line/i.test(ua);
+    }
+
+    // --- 2. ตั้งค่าลิงก์สำหรับเมนูต่างๆ ---
+    function setupMenuLinks() {
+
+      // ลิงก์เมนู 2: ระบบนัดหมายคณบดี (JC Dean App)
+      const btn2 = document.getElementById('menu-2-btn');
+      const targetUrl2 = 'https://script.google.com/a/macros/jc.tu.ac.th/s/AKfycbwvPnKlQKmzz95og4Y0qoh67-f4BbCQgPEnGTthMSvJR0xyvzc7mwbEFu8ZA7mtcluQ/exec';
+      // const targetUrl2 = 'https://jc-media-it.github.io/JC-Dean-App/';
+
+      // เช็คและบังคับเปิด Safari หากเป็น iOS + In-App Browser
+      if (isIOS() && isInAppBrowser()) {
+        // if(btn1) btn1.href = 'x-safari-' + targetUrl1;
+        if(btn2) btn2.href = 'x-safari-' + targetUrl2;
+      } else {
+        // if(btn1) btn1.href = targetUrl1;
+        if(btn2) btn2.href = targetUrl2;
+      }
+    }
+
+    // --- 3. การทำงานเมื่อกดปุ่มเมนู ---
+    function handleMenuClick(e) {
+      e.preventDefault(); 
+      const targetUrl = this.href; 
+
+      if (!targetUrl || targetUrl === '#') return;
+
+      // แสดง Loading อนิเมชัน
+      Swal.fire({
+        title: 'กำลังพาท่านเข้าสู่ระบบ',
+        html: 'กรุณารอสักครู่...',
+        allowOutsideClick: false, 
+        allowEscapeKey: false,
+        color: '#743d88',
+        didOpen: () => {
+          Swal.showLoading(); 
+        }
+      });
+
+      // หน่วงเวลา 600ms แล้ว Redirect ไปที่ Apps Script
+      setTimeout(() => {
+        window.location.href = targetUrl;
+      }, 600);
+    }
+
+    // ผูก Event การคลิกให้กับปุ่มเมนู 1 และ 2
+    const menu1Btn = document.getElementById('menu-1-btn');
+    if(menu1Btn) menu1Btn.addEventListener('click', handleMenuClick);
+
+    const menu2Btn = document.getElementById('menu-2-btn');
+    if(menu2Btn) menu2Btn.addEventListener('click', handleMenuClick);
+
+    // --- 4. การทำงานเมื่อกดปุ่มที่ยังไม่พร้อมใช้งาน ---
+    const pendingBtns = document.querySelectorAll('.btn-pending');
+    pendingBtns.forEach(btn => {
+      btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        Swal.fire({
+          icon: 'info',
+          title: 'อยู่ระหว่างดำเนินการ',
+          text: 'ระบบนี้กำลังอยู่ระหว่างการพัฒนาโดยทีมงาน จะพร้อมให้บริการในเร็วๆ นี้ครับ',
+          confirmButtonColor: '#743d88',
+          confirmButtonText: 'รับทราบ'
+        });
+      });
+    });
+
+    // --- 5. จัดการเมื่อกด Back กลับมาหน้านี้ ---
+    window.addEventListener('pageshow', function(event) {
+      Swal.close(); 
+    });
+
+    // เรียกใช้งานเมื่อโหลดหน้าเสร็จ
+    document.addEventListener("DOMContentLoaded", () => {
+      setupMenuLinks();
+    });
+  </script>
+</body>
+</html>
